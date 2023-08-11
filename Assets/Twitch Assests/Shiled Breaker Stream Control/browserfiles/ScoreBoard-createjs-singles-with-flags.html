@@ -1,0 +1,75 @@
+<!--
+  Copyright 2018, 2019, 2020 Miguel Müller
+
+  This file is part of Shieldbreakers-StreamControl-setup.
+
+  Shieldbreakers-StreamControl-setup is free software: you can redistribute it
+  and/or modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  Shieldbreakers-StreamControl-setup is distributed in the hope that it will be
+  useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+  Public License for more details.
+
+  You should have received a copy of the GNU General Public License along with
+  Shieldbreakers-StreamControl-setup.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="js/easeljs-2017.10.12.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/tweenjs-2017.10.12.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/countries.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scoreboard-updater.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      const FONT_COLOR = "#FFFFFF";
+      
+      const NAME_X = 568;
+      const NAME_Y = 10;
+      const NAME_MAX_WIDTH = 288;
+      const NAME_FONT_SIZE = 30;
+      
+      const CHAR_X = 710;
+      const CHAR_Y = 0;
+      
+      const FLAG_X = 333;
+      const FLAG_Y = 27;
+      const FLAG_WIDTH = 60;
+      const FLAG_PATH = "images/GoSquared/cropped/iso/64shiny/";
+
+      function init() {
+        const board = new createjs.Container();
+
+        scoreboard = new createjs.Bitmap("images/singles-overlay-with-flags.png");
+        scoreboard.regX = 0;
+        scoreboard.regY = 0;
+
+        board.addChild(scoreboard);
+
+        board.addChild(newDynText("pName1", NAME_X, NAME_Y, NAME_MAX_WIDTH, NAME_FONT_SIZE, FONT_COLOR));
+        board.addChild(newMirroredDynText("pName2", "pName1"));
+        
+        board.addChild(newDynImage("pChar1", CHAR_X, CHAR_Y, CHAR_PATH));
+        board.addChild(newMirroredDynImage("pChar2", "pChar1"));
+        
+        board.addChild(newDynImage("pCountry1", FLAG_X, FLAG_Y, FLAG_PATH));
+        board.addChild(newMirroredDynImage("pCountry2", "pCountry1"));
+
+        board.addChild(newDynText("pScore1", SCORE_X, SCORE_Y, SCORE_MAX_WIDTH, SCORE_FONT_SIZE, FONT_COLOR));
+        board.addChild(newMirroredDynText("pScore2", "pScore1"));
+
+        board.addChild(newDynText("round", ROUND_X, ROUND_Y, ROUND_MAX_WIDTH, ROUND_FONT_SIZE, FONT_COLOR));
+        
+        createScoreboard(board);
+      }
+    </script>
+  </head>
+  <body onLoad="init()" style="margin:0px;">
+    <canvas id="myCanvas" width="1920" height="100">
+      canvas
+    </canvas>
+  </body>
+</html>
