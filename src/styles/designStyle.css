@@ -1,0 +1,97 @@
+h1 {
+    font-size: 35px;
+    color: white;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 15px;
+    color: white;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#base{
+    height: 150px;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+#base h2 {
+    padding-left: 200px;
+    padding-right: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+#color1 {
+    background-color: #0C090A;
+    border: 2px solid white;
+}
+
+#secondary {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#secondary h2 {
+    padding-left: 200px;
+    padding-right: 160px;
+    display: inline-block;
+    text-align: center;
+}
+
+#comp-color1 {
+    background-color: #2C3539;
+}
+
+#tertiary {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#tertiary h2 {
+    padding-left: 200px;
+    padding-right: 180px;
+    display: inline-block;
+    text-align: center;
+}
+
+#highlight1 {
+    background-color: #FFA500;
+}
+
+#highlight2 {
+    background-color: #2d5dcc;
+}
+
+#highlight3 {
+    background-color: #4fe0b0;
+}
+
+#highlight4 {
+    background-color: #A70D2A;
+}
+
+.colorbox {
+    display: inline-block;
+    min-height: 100px;
+    min-width: 250px;
+    margin: 20px auto;
+    margin-left: 10px;
+    text-align: center;
+    color:  white;
+}
+
+.label {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
