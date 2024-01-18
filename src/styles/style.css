@@ -17,6 +17,8 @@ a {
 nav {
     padding-left: 40px;
     background-color: #2C3539;
+    position: fixed;
+    width: 3000px;
 }
 
 nav ul {
@@ -29,22 +31,63 @@ nav ul li {
     margin: 0 20px;
 }
 
-nav ul li a {
+/*nav ul li*/ a {
     color: white;
 }
 
-nav ul li a:hover {
+/*nav ul li*/ a:hover {
     color: #FFA500;
 }
 
 main {
-    display: flexbox;
-    margin-left: 200px;
+    display: flex;
+    padding-top: 80px;
+}
+
+.content {
+    display: inline-flex;
+    margin-left: 100px;
     margin-top: 50px;
 }
 
+.blog {
+    display: block;
+}
+
+.post {
+    border: 2px solid #FFA500;
+    margin-bottom: 50px;
+}
+
+
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #FFA500;
+    padding: 5px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    height: 60px;
+    width: auto;
+    margin: 2px;
+}
+
+.post-content {
+    padding: 10px;
+}
+
 #sidebar {
-    display: flexbox;
+    padding-top: 20px;
     background-color: #2C3539;
-    width: 100px;
+    width: 160px;
+    height: 1000px;
+    text-align: center;
 }
